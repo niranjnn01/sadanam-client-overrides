@@ -1,0 +1,21 @@
+[
+    {
+        "uri": "external-programs",
+        "method": "GET",
+        "action": "PageController",
+        "middleware": ["web", "auth"],
+        "params": {
+            "view": "pages.external-programs"
+        }
+    },
+    {
+        "uri": "gourikutty-amma",
+        "method": "GET",
+        "action": "PageController",
+        "middleware": ["web"],
+        "params": {
+            "view": "pages.gourikutty-amma",
+            "name": "gourikutty-amma"
+        }
+    }
+]
