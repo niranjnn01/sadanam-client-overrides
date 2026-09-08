@@ -1,48 +1,111 @@
-@extends('layouts.guest')
+@extends('theme::layouts.guest')
 
 
 @section('content')
 
-<div class=" ">
-<div class=" overflow-hidden ">
+        
+    <x-system::layout.container>
 
-    <h1 class="text-4xl font-semibold mb-6 text-gray-900">Saradagiri School</h1>
+        <div class="flex flex-col gap-5 mb-5">
 
-<div>
-    <div class="md:float-right flex flex-col justify-center  md:ml-6 md:w-1/3   ">
-      
-            <x-image class="rounded-lg" src="{{tenant_asset('images/saradagiri-school.jpg')}}" alt="Saradagiri School"/>
-            
- 
-        <p class="mt-2 text-xs text-end text-gray-500">Saradagiri School</p>
-    </div>
+            <p class="text-lg">Sri Narayana Guru, the great visionary, recognized the need for a hostel for underprivileged girls and women who lacked safe and affordable accommodation while pursuing higher education and employment opportunities in Thiruvananthapuram. Guru initiated the effort by offering a gold coin along with his blessings, leading to the founding of SNV Sadanam.</p>
 
-    <p class="mb-4 text-md">From its humble beginnings as a nursery and primary school within The Saradagiri Project, Sri Narayana English Medium School has blossomed into a beacon of learning.</p>
+            <p class="text-lg">Established in 1924 at Thiruvananthapuram, Sree Narayana Vidyarthini Sadanam (SNV Sadanam) today is a premier institution dedicated to the educational and social empowerment of women. For over a century, the organization has provided secure residential facilities and support systems for female students and working professionals. </p>
 
-    <p class="mb-4 text-md">Initially the first English Medium primary school in Varkala, it has since evolved into a comprehensive educational institution recognized by the Government of Kerala, thanks to the unwavering commitment of Gourikutty Amma, its esteemed founder.</p>
+            <p class="text-lg">Established on the principle that education is a primary tool for social progress, the institution was created to be an affordable and inclusive space, open to all women regardless of caste, religion or creed. Besides Thiruvananthapuram, the S.N.V. Women’s Association also purchased 6 acres of land at Varkala. Being close to Sivagiri, the picturesque place was named Saradhagiri. Apart from commendable social work that was carried on earlier, Saradagiri also has a school and a hostel currently.</p>
 
-    <p class="mb-4 text-md  "><span class="text-yellow-500"><a href="{{ tenant_route('gourikutty-amma') }}" class="text-primary font-medium">Gourikutty Amma </a></span>, the esteemed founder of Sri Narayana English Medium School at Saradagiri, Varkala, was more than a mere educator. Her legacy echoes through time, resonating with dedication and passion for uplifting women, especially those marginalized in society.</p>
+        </div>
 
-    <h2 class="text-2xl font-bold mb-4 text-gray-800 ">A Beacon of Education</h2>
+        
+    </x-system::layout.container>
 
-    <p class="mb-4 text-md">Nestled amongst the picturesque hills of Varkala, in close proximity to the sacred Sree Narayana Guru's Mahasamadhi Mandiram, Sri Narayana English Medium School boasts a sprawling campus spanning 6.5 acres.</p>
 
-</div>
+
+    <x-system::layout.band class="bg-surface my-5 p-10">
+        
+
+        <div class="max-w-5xl mx-auto">
+
+            <x-headings.two class="text-secondary mb-3">Core Facilities and Services available</x-headings>
+            <p class="text-center text-lg mb-5">The organization operates several wings designed to meet the diverse needs of its residents</p>
+
+
+            <div class="flex justify gap-3">
+
+                @php
+
+                $facilities = [
+                    [
+                        'title' => "Student Hostel",
+                        'description' => "Safe and affordable housing for students enrolled in various educational institutions across the city.",
+                        'icon' => "heroicon-o-academic-cap",
+                    ],
+                    [
+                        'title' => "Working Women’s Hostels",
+                        'description' => "Dedicated accommodation for professionals, ensuring a supportive environment for those entering the workforce.",
+                        'icon' => "heroicon-o-academic-cap",
+                    ],
+                    [
+                        'title' => "Guest Rooms",
+                        'description' => "The hostels provide safe and affordable guest rooms for women who are on a short visit to the city. ",
+                        'icon' => "heroicon-o-academic-cap",
+                    ]
+                ];
+                    
+                @endphp
+
+                @foreach ($facilities as $item)
+                    <x-cards.borderless-compact
+                        :title="$item['title']"
+                        :description="$item['description']"
+                        :icon="$item['icon']"
+                    />    
+                @endforeach
+                
+            </div>
+
+
+        </div>
+
+    </x-system::layout.band>
+
+    <x-system::layout.container>
+        
+
     
-    
+        
+        <div class="flex gap-5 my-10 py-5">
+            <div class="flex-1">
 
-    <p class="mb-2 text-md">The school is well-equipped with ample amenities to cater to the diverse needs of its students like:</p>
-    <ul class="list-disc list-inside ml-4 mb-8 text-md space-y-1">
-        <li>Playground</li>
-        <li>Smart Classrooms</li>
-        <li>Science Laboratory</li>
-        <li>Library</li>
-    </ul>
+                <x-image class="shadow-xl mb-3" src="{{tenant_asset('images/branches/varkala.webp') }}" alt="Hostel at Saradagiri, Varkala."/>
+                <x-figcaption class="text-center" caption="Hostel at Saradagiri, Varkala."/>
+            </div>
+            <div class="flex-1">
 
-    <p class="mt-8 pt-4 mb-4 text-md ">Today, the ownership and management of the school are entrusted to the <span class="font-bold">SNV Women's Association, Thiruvananthapuram.</span> </p>
+                <x-headings.two class="text-secondary text-start">Hostel at Saradagiri, Varkala.</x-headings.two>
+                <p class="text-lg">The institution is managed by the S.N.V. Women’s Association, whose committee members work honorarily to carry out the noble mission of the founders of the institution. The Sadanam is notable for its long-standing tradition of inmates-led governance. The management encourages residents to participate in the internal administration and decision-making process and strives to foster practical leadership experience and civic responsibilities. They also conduct very entertaining cultural programmes on special days like the hostel day.</p>
 
-</div>
+            </div>
+        </div>
+        
 
 
-</div>
+        
+        <div class="p-10 my-5 bg-surface border-primary-foreground rounded-xl">
+
+
+            <div class="max-w-3xl mx-auto">
+                <x-headings.two class="text-secondary">Mission and Future Outlook</x-headings.two>
+                <p class="text-lg  italic">Marking its centenary in 2024, SNV Sadanam remains committed to its original mission: removing the logistical and social barriers that prevent women from achieving their full potential. The organization continues to modernize its infrastructure while maintaining its legacy as a center for providing a safe and secure ‘home away from home’ atmosphere for its inmates.</p>
+            </div>
+
+        </div>
+        
+
+
+        <br/>
+    </x-system::layout.container>
+
+
+
 @endsection

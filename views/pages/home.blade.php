@@ -1,280 +1,163 @@
-@extends('layouts.guest')
+@extends('theme::layouts.guest')
 
 @section('content')
 
 
+
     {{-- Hero Section --}}
-    
-    <section class="w-full h-[500px]">
-        <x-sections.hero-split 
-            image="{{tenant_asset('images/sree-narayana-guru.jpg')}}" 
-            alt="Your Business"
-        >
-            <span class="text-primary">Sree Narayana</span> English Medium School in
-            <span class="block md:inline">Varkala, is a legacy continued.</span>
-        </x-sections.hero-split>
-    </section>
+    <x-heros.lead-capture background="{{ tenant_asset('images/hero-bg.webp') }}">
 
 
+        <div class="text-start">
+            <!-- Tagline / Pre-title -->
+            <p class="font-bold tracking-widest text-white/90 md:text-xl">
+                Est. 1926 
+            </p>
 
-    {{-- Feature Blocks Section --}}
-    <section class="feature-blocks py-12 bg-white">
-        <div class="container max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-            
-            @foreach($highlights as $highlight)
-            <x-featured-card 
-                :icon="$highlight['icon']"
-                :title="$highlight['title']"
-                :description="$highlight['description']"
-            />
-            @endforeach
-            
+            <!-- Main Heading -->
+            <h1 class="text-3xl font-bold tracking-tight text-primary md:text-5xl lg:text-6xl font-serif shadow-lg">
+                SNV Sadanam
+            </h1>
+
+            <!-- Tagline -->
+            <h2 class="font-brand text-xl font-semibold text-white/90 md:text-2xl">
+                A Home Away from Home
+            </h2>
         </div>
-    </section>
+        
+        
+        <x-slot:description>
+            SNV Sadanam has been a trusted sanctuary for working women. providing safety, comfort, and a true sense of belonging in the heart of the city.
+        </x-slot:description>
 
-    {{-- A Beacon of Education Section --}}
-    <section class="beacon-of-education py-16 bg-white">
-        <div class="container max-w-7xl mx-auto px-4 flex flex-col lg:flex-row gap-12">
+        <x-slot:actions>
+            <x-button href="/about" variant="primary" size="xl">Learn about us</x-button>
             
-            <!-- Left: Text + Image -->
-            <div class="beacon-text-block lg:w-2/3 flex flex-col justify-between">
-                <div>
-                    <h2 class="text-3xl font-bold mb-6 border-b-2 border-yellow-400 pb-2 w-full inline-block">
-                        A Beacon of Education
-                    </h2>
+        </x-slot:actions>
 
-                    <div class="w-full flex flex-col md:flex-row">
-                        <div class="md:w-3/4">
-                            <p class="text-md mb-6 leading-relaxed font-semibold">
-                                Nestled amidst the serene landscapes of Varkala, a beacon of empowerment was ignited by the indomitable spirit of Gourikutty Amma.
-                            </p>
-                            <p class="mb-4 text-gray-700">
-                                The esteemed founder of Sri Narayana English Medium School at Saradagiri, Varkala was more than a mere educator. Her legacy echoes through the hallowed halls, where knowledge blossoms and values are materialized in every life.
-                            </p>
-                            <p class="mb-4 text-gray-700">
-                                Sri Narayana English Medium School, which began as a humble nursery and primary school blossomed into a haven of learning, today where young minds are imbued with knowledge and values.
-                            </p>
-                            <p class="mb-6 text-gray-700">
-                                Recognized by the Government of Kerala, Sri Narayana English Medium School is nearing 30 years of illuminating paths in education.
-                            </p>
-                        </div>
-
-                        <!-- Image -->
-                        <div class="md:w-1/4 ms-5 mt-6 md:mt-0">
-                            <div class="relative">
-                                <div class="image-skeleton absolute inset-0 rounded-lg"></div>
-                                <img
-                                    src="{{tenant_asset('images/gourikutty-amma.jpg')}}"
-                                    alt="Gourikutty Amma"
-                                    class="lazy-image rounded-lg shadow-md object-cover w-full relative"
-                                    loading="lazy"
-                                >
-                            </div>
-                            <p class="image-caption text-center text-sm text-gray-600 mt-2 font-medium">
-                                Gourikutty Amma
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <a
-                    href="/about"
-                    class="bg-primary text-black px-4 py-2 rounded-lg text-lg hover:bg-yellow-600 transition duration-300 shadow-md self-start mt-6"
-                >
-                    Learn More
-                </a>
-            </div>
-
-            <!-- Right: Quote -->
-            <div class="lg:w-1/3 flex">
-                <div class="quote-box flex flex-col justify-center bg-[#f1d04b] shadow-lg p-8 w-full h-full">
+        <x-slot:form>
+            <x-forms.callback-request formContainerClass="bg-surface/75 p-5 rounded-xl">
                 
-                    <p class="quote-text  text-black mb-3">
-                        <span class="inline-flex items-center mr-2"><x-heroicon-o-light-bulb class="w-10 h-10" /></span>
-                        <span class="text-xl">
-                            In oneself lies the whole world and if you know how to look and learn, the door is there and the key is in your hand.
-                        </span>
+                <x-slot:heading>
+                    <x-headings.two class="text-secondary font-bold mb-3">
+                        Request a call back
+                    </x-headings.two>
+                </x-slot:heading>
+
+                <x-slot:subHeading>
+                    <p class="italic text-lg pb-5">
+                        Our team will get back to you at the earliest.
                     </p>
-                    <p class="quote-author font-semibold text-right">
-                        - Sree Narayana Guru
-                    </p>
-                </div>
-            </div>
+                </x-slot:subHeading>
+
+
+            </x-forms.callback-request>
+        </x-slot:form>
+
+    </x-heros.lead-capture>
+    
+
+
+    {{-- Composite : Celebrations --}}
+    @include('system::composites.celebration-band')
+
+
+
+    <x-system::layout.section class="bg-primary-foreground">
+        <x-system::layout.container class=" my-10">
+
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl mb-3 text-center font-brand">Our Branches</h2>
+            <p class="mb-10 text-center ">
+                Our hostels feature an expanding network of branches strategically situated in prime, safe, and vibrant neighborhoods across the city. Designed with student and traveler convenience in mind, every location offers seamless access to major public transit hubs, key educational institutes, and bustling city centers.
+            </p>
         </div>
-    </section>
 
-    <!-- Events Section with Theme Colors -->
-    <section class="pb-20 w-full bg-white">
-        <div class="container max-w-7xl mx-auto px-8">
-            <h2 class="text-2xl font-bold mb-2">Upcoming Events</h2>
-            <p class="text-muted-foreground mb-10">Stay connected with our vibrant community through these exciting events.</p>
+        <div class="flex gap-5">
 
-            @if($events->count() > 0)
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    @foreach($events as $event)
-                        <!-- Event Card -->
-                        <a href="{{ route('events.view', $event->slug) }}" class="rounded-xl shadow-xl overflow-hidden text-white relative h-64 transform hover:-translate-y-1 transition duration-300 group block">
-                            <!-- Event Image with Loading State -->
-                            <div class="absolute inset-0 bg-gray-200 animate-pulse event-image-skeleton"></div>
-                            
-                            <img src="{{ $event->image_url }}" 
-                                     alt="{{ $event->title }}" 
-                                     class="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.05] transition duration-500 event-image"
-                                     loading="lazy">
-
-
-                            <!-- Gradient Overlay -->
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-                            
-                            <!-- Content -->
-                            <div class="absolute inset-0 flex flex-col justify-end p-6">
-                                @if($event->price && $event->price > 0)
-                                    <div class="absolute top-0 right-0 bg-primary/90 text-black p-3 rounded-bl-xl font-bold text-xl">
-                                        ₹{{ number_format($event->price, 0) }}
-                                    </div>
-                                @elseif(isset($event->is_free) && $event->is_free)
-                                    <div class="absolute top-0 right-0 bg-green-500/90 p-3 rounded-bl-xl font-bold text-sm">
-                                        FREE
-                                    </div>
-                                @endif
-                                
-                                <p class="text-4xl font-extrabold mb-1">
-                                    {{ \Carbon\Carbon::parse($event->starting_at)->format('jS') }}
-                                </p>
-                                <p class="text-sm font-semibold opacity-90 mb-3">
-                                    {{ strtoupper(\Carbon\Carbon::parse($event->starting_at)->format('M Y')) }}
-                                </p>
-                                <h3 class="text-xl font-bold mb-2 leading-tight line-clamp-2">
-                                    {{ $event->title }}
-                                </h3>
-                                
-                                @if($event->starting_at)
-                                    <div class="flex items-center space-x-2 text-sm opacity-90">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                        </svg>
-                                        <span>{{ \Carbon\Carbon::parse($event->starting_at)->format('g:i A') }}</span>
-                                    </div>
-                                @endif
-                                
-                                @if($event->venue)
-                                    <div class="flex items-center space-x-2 text-sm opacity-90 mt-1">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" />
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                        </svg>
-                                        <span class="line-clamp-1">{{ $event->venue }}</span>
-                                    </div>
-                                @endif
-                            </div>
-                        </a>
-                    @endforeach
-                </div>
-
-                <!-- View All Events Button -->
-                @if($events->count() >= 4)
-                    <div class="mt-12 text-center">
-                        <a href="{{ route('events.index') }}" class="inline-flex items-center px-6 py-3 bg-primary text-black rounded-lg hover:bg-yellow-600 transition-all duration-200 hover:shadow-lg transform hover:-translate-y-0.5 font-semibold">
-                            <span>View All Events</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                            </svg>
-                        </a>
-                    </div>
-                @endif
-            @else
-                <x-empty-state 
-                    title="No Upcoming Events"
-                    message="We're currently planning exciting new events for our school community. Stay tuned for announcements or check back soon!"
-                    icon="heroicon-o-calendar"
+            @foreach($branches as $branch)
+            <x-cards.media 
+                    class="flex-1 shadow-none interactive-card"
+                    :image="[
+                        'src' => tenant_asset($branch['image']['src']),
+                        'alt' => $branch['image']['alt']
+                    ]"
+                    :title="$branch['title']"
+                    :description="$branch['excerpt']"
+                    :ctas="$branch['ctas']"
                 />
-            @endif
+            @endforeach
+
         </div>
-    </section>
+        </x-system::layout.container>
+    </x-system::layout.section>
 
-    {{-- Bottom Features Section --}}
-    <section class="bottom-features py-16 text-white mb-20">
-        <div class="font-sans bg-fixed bg-center bg-no-repeat text-gray-800 p-8"
-        style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{tenant_asset('images/bg.jpg')}});"
-        >
-            <div class="container max-w-7xl mx-auto px-6 
-                        grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left">
 
-                <!-- Exemplary Educators (Large Box) -->
-                <div class="text-white feature-item-large md:col-span-2 p-8 bg-gray-500 flex flex-col justify-center h-auto md:h-64  hover:shadow-xl transition-all duration-300">
-                    <h2 class="text-3xl font-bold mb-4">Exemplary Educators</h2>
-                    <p class="mb-3 opacity-90">
-                        Our teachers exemplify unwavering dedication and professionalism, fostering an enriching learning environment.
-                    </p>
-                    <p class="opacity-90">
-                        Through personalized attention, the teachers create a nurturing space where students are encouraged to be curious, foster critical thinking, inspiring a lifelong love of learning.
-                    </p>
+    {{-- Compiste Section --}}
+    <x-container class="bg-surface rounded-xl my-10 max-w-[1440px]">
+
+
+        <x-system::composites.standard-split :image="['src' => tenant_asset('images/canteen.webp'), 'alt' => 'Canteen']">
+            <x-slot:heading>
+                
+                <x-headings.one varient="center-loud">
+                    Peaceful Minds
+                </x-heading.one>
+
+            </x-slot:heading>
+            <x-slot:description>
+                <div class="flex flex-col gap-5">
+                    <p>Designed as a quiet sanctuary amid campus life, our hostel offers a naturally tranquil environment that makes focusing on your studies or work effortless. The peaceful atmosphere fosters concentration, helping you stay productive and balanced throughout the stay.</p>
+                    <p>When it is time to unwind, that same calm energy seamlessly transitions into a space for relaxation and social connection. Serene outdoor courtyards and cozy common rooms invite you to recharge with a book, share a casual meal, or gather with friends for late-evening chats. It strikes the perfect balance</p>
                 </div>
+                
+            </x-slot:description>
+        </x-system::composites.standard-split>
 
-                <!-- We are Diverse -->
-                <div class="feature-item-small p-8 border-4 border-white text-white hover:bg-white hover:text-gray-800 transition-all duration-300 group">
-                    <h2 class="text-xl font-bold mb-2 text-primary group-hover:text-gray-800">We are Diverse</h2>
-                    <p class="opacity-90 group-hover:opacity-100">We represent a diverse range of cultures, experiences, and perspectives.</p>
-                </div>
+        
 
-                <!-- We are 1:20 -->
-                <div class="feature-item-small p-8 border-4 border-white  hover:bg-white hover:text-gray-800 transition-all duration-300 group">
-                    <h2 class="text-xl font-bold mb-2 text-primary group-hover:text-gray-800">
-                        We are <br>
-                        <span class="text-4xl font-extrabold text-white block leading-none my-2 group-hover:text-primary">1:20</span>
-                    </h2>
-                    <p class="text-white opacity-90 group-hover:opacity-100">
-                        Student-teacher ratio of 1:20, ensuring every student receives personalized attention.
-                    </p>
-                </div>
+        <x-system::composites.borderless-feature-container>
+            
+            @foreach($featuredSectionWhychooseUs->items as $featuredSection)
 
-            </div>
-        </div>
-    </section>
+                <x-cards.borderless 
+                    :title="$featuredSection['title']" 
+                    :description="$featuredSection['description']" 
+                    :icon="$featuredSection['media']"/>
 
-    {{-- Testimonials Section --}}
-    @if($testimonials->count() > 0)
-    <div class="py-10 mx-auto bg-white">
-        <div class="container max-w-7xl mx-auto px-8">
-            <x-headings.four class="text-foreground">
-                What they say <span class="font-medium text-primary">About us</span>
-            </x-headings.four>
+            @endforeach
 
-            <div class="flex flex-col gap-5 lg:flex-row lg:gap-7">
-                @if($testimonials->count() > 0)
-                @foreach($testimonials as $index => $testimonial)
-                <x-card class="basis-1/3 bg-card border border-border shadow-xl gap-3 p-10 hover:shadow-2xl transition-all duration-300">
-                    <x-card.header class="relative">
-                        <div class="my-3 flex gap-3">
-                            <div>
-                                <img src="{{ tenant_asset($testimonial->testimonialBy->displayPicture->url ?? '/asset/people1.jpg') }}" 
-                                     class="rounded-full w-10 h-10 object-cover" 
-                                     alt="{{ $testimonial->testimonialBy->full_name ?? 'Anonymous' }}"
-                                     loading="lazy" />
-                            </div>
-                            <div class="flex flex-col">
-                                <div class="font-bold text-card-foreground">{{ $testimonial->testimonialBy->full_name ?? 'Anonymous' }}</div>
-                                <div class="text-sm text-muted-foreground">{{ $testimonial->testimonialBy->type ?? 'Client' }}</div>
-                            </div>
-                        </div>
-                        <x-heroicon-s-chat-bubble-bottom-center-text class="text-yellow-200 absolute w-10 h-10 right-0 top-0 text-6xl" />
-                    </x-card.header>
-                    <x-card.content>
-                        <x-card.description class="text-card-foreground">{{ $testimonial->description }}</x-card.description>
-                    </x-card.content>
-                </x-card>
-                @endforeach
-                @else
-                    <x-empty-state 
-                        title="No Testimonials Yet"
-                        message="We haven't received any testimonials yet. Be the first to share your experience with our services!"
-                        icon="heroicon-o-chat-bubble-left-right"
-                    />
-                @endif
-            </div>
-        </div>
-    </div>
-    @endif
+        </x-system::composites.borderless-feature-container>
+
+
+    </x-container>
+
+
+    {{-- Composite : Img featured Combo --}}
+    @include('system::composites.img-featured-combo')
+
+    {{-- Quotation - compact --}}
+    <x-system::composites.quotations.compact
+        quotation="Whatever be the difference in men's creed, dress, and language—their humanity is one."
+        author="Sree Narayana Guru"
+    />
+    
+
+    {{-- Componet Text Image Gallery --}}
+    <x-system::composites.text-image-gallery 
+        eyebrow="100 Years of Heritage & Comfort" 
+        title="A Glance Inside Our Living History"
+        :featuredImage="tenant_asset('images/stair-well.webp')"  
+        :gallery="$homeGallery"
+    >
+        <p>
+            Step into a space where a century of heritage meets modern comfort. Every corner tells a story, offering an inspiring backdrop for your stay.
+        </p>
+        <p>Explore the thoughtful details designed to make you feel right at home. you will find fully equipped social lounges, cozy quiet zones, and pristine modern amenities crafted to support both relaxation and productivity. Browse our gallery to get a glimpse of the unique spaces awaiting you.</p>
+    </x-system::composites.text-image-gallery>
+    
+    
+
 
     
 <style>

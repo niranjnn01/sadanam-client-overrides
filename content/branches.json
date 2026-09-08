@@ -1,0 +1,162 @@
+{
+  "branches": [
+    {
+      "image": {
+        "src": "images/branches/bakery-jn.webp",
+        "alt": "Bakery Jn"
+      },
+      "title": "SNV Sadanam Main",
+      "excerpt": "Positioned in the heart of the city, offers ultimate convenience for working professionals.",
+      "description": "Positioned directly in the heart of the city, this branch offers ultimate convenience for busy working professionals. You are just minutes away from major corporate hubs, shopping districts, and transit stations, making your daily commute effortless while keeping you close to the city’s best dining and social spots.\n\nInside, you will find a vibrant yet secure environment featuring 24/7 safety measures, modern living spaces, and collaborative work lounges. It provides the perfect balance of an active urban lifestyle with a comfortable, professional-friendly home to return to every evening.",
+      "ctas": [
+        {
+          "href": "/branches",
+          "label": "View Branch"
+        }
+      ],
+      "address": {
+          "address_line_1": "Vanross Jn",
+          "address_line_2": "Palayam",
+          "city": "Thiruvananthapuram",
+          "state": "Kerala",
+          "postal_code": "695034",
+          "country": "IN",
+          "address_type": "registered",
+          "is_primary": true,
+          "iframe_src":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7891.970620529932!2d76.94351819357911!3d8.500806400000016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bbb763351743%3A0xe58b04390cebe8c2!2sSNV%20Sadanam%20Main%20Hostel!5e0!3m2!1sen!2sin!4v1788105451945!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+      },
+
+      "phone_numbers": [
+          {
+              "number": "+914712321105",
+              "type": "landline",
+              "label": "Main Office",
+              "extension": null,
+              "is_primary": true
+          },
+          {
+              "number": "+914712338747",
+              "type": "landline",
+              "label": "Main Office",
+              "extension": null,
+              "is_primary": true
+          }
+      ]
+    },
+
+    {
+      "image": {
+        "src": "images/branches/bakery-jn.webp",
+        "alt": "Bakery Jn"
+      },
+      "title": "SNV Sadanam KREH",
+      "excerpt": "Positioned in the heart of the city, offers ultimate convenience for working professionals.",
+      "description": "Positioned directly in the heart of the city, this branch offers ultimate convenience for busy working professionals. You are just minutes away from major corporate hubs, shopping districts, and transit stations, making your daily commute effortless while keeping you close to the city’s best dining and social spots.\n\nInside, you will find a vibrant yet secure environment featuring 24/7 safety measures, modern living spaces, and collaborative work lounges. It provides the perfect balance of an active urban lifestyle with a comfortable, professional-friendly home to return to every evening.",
+      "ctas": [
+        {
+          "href": "/branches",
+          "label": "View Branch"
+        }
+      ],
+      "address": {
+          "address_line_1": "Vanross Jn",
+          "address_line_2": "Palayam",
+          "city": "Thiruvananthapuram",
+          "state": "Kerala",
+          "postal_code": "695034",
+          "country": "IN",
+          "address_type": "registered",
+          "is_primary": true
+      },
+
+      "phone_numbers": [
+          {
+              "number": "+914712321105",
+              "type": "landline",
+              "label": "Main Office",
+              "extension": null,
+              "is_primary": true
+          },
+          {
+              "number": "+914712338747",
+              "type": "landline",
+              "label": "Main Office",
+              "extension": null,
+              "is_primary": true
+          }
+      ]
+    },
+    
+    {
+      "image": {
+        "src": "images/branches/vellayambalam.webp",
+        "alt": "Vellayambalam"
+      },
+      "title": "SNV Sadanam Vellayambalam",
+      "excerpt": "Located in the city's prestigious civic core",
+      "description": "Located in the city's prestigious civic core, this location places you right next to key government offices, administrative headquarters, and major commercial centers. It is an ideal address for civil servants, legal professionals, corporate executives, and women working in official districts.\n\nThis branch combines high-level security and a dignified atmosphere with premium everyday amenities. Enjoy high-speed connectivity, peaceful study and work zones, and fully managed living facilities designed to take the hassle out of your workday routine.",
+      "ctas": [
+        {
+          "href": "/branches",
+          "label": "View Branch"
+        }
+      ],
+      "address": {
+          "address_line_1": "Vikas Bhavan",
+          "address_line_2": "Near Observatory",
+          "city": "Thiruvananthapuram",
+          "state": "Kerala",
+          "postal_code": "695033",
+          "country": "IN",
+          "address_type": "registered",
+          "is_primary": true
+      },
+
+      "phone_numbers": [
+          {
+              "number": "+4712322714",
+              "type": "landline",
+              "label": "Main Office",
+              "extension": null,
+              "is_primary": true
+          }
+      ]
+    },
+
+    {
+      "image": {
+        "src": "images/branches/varkala.webp",
+        "alt": "Thiruvananthapuram branch building"
+      },
+      "title": "SNV Sadanam Saradagiri",
+      "excerpt": "Find your peace of mind after a busy day in a quiet, nature-filled sanctuary",
+      "description": "Find your peace of mind after a busy day in a quiet, nature-filled sanctuary. Nestled high on a scenic hilltop, this location offers a secure and restful retreat with panoramic views, fresh air, and peaceful surroundings tailored for working women seeking work-life balance.\n\nDesigned with comfort and focus in mind, the branch features dedicated quiet spaces, reliable high-speed internet for remote work, and cozy common areas. It is the perfect place to unwind, recharge, and enjoy a safe, supportive community of fellow professional women",
+      "ctas": [
+        {
+          "href": "/branches",
+          "label": "View Branch"
+        }
+      ],
+      "address": {
+          "address_line_1": "Sivagiri Rd, Cherukunnam",
+          "address_line_2": "Varkala",
+          "city": "Thiruvananthapuram",
+          "state": "Kerala",
+          "postal_code": "695141",
+          "country": "IN",
+          "address_type": "registered",
+          "is_primary": true
+      },
+
+      "phone_numbers": [
+          {
+              "number": "+919544608530",
+              "type": "mobile",
+              "label": "Main Office",
+              "extension": null,
+              "is_primary": true
+          }
+      ]
+    }
+  ]
+}

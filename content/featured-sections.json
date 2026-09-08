@@ -1,0 +1,65 @@
+{
+  "sections": [
+    {
+      "name": "why-choose-us",
+      "title": "Why Choose Us",
+      "description": "Discover what makes our institution different.",
+      "is_active": true,
+
+      "items": [
+        {
+          "name": "century-of-trust",
+          "eyebrow": "100 Years of Experience",
+          "title": "A Century of Trust",
+          "description": "For over a century, we have provided a comfortable and dependable home for working women and students.",
+
+          "media_type": "icon",
+          "media": "star",
+          "media_url": null,
+          "open_in_new_tab": false,
+
+          "is_active": true
+        },
+        {
+          "name": "ideal-location",
+          "eyebrow": "A Location That Keeps You Connected",
+          "title": "In the Heart of the City",
+          "description": "Located in one of the city’s most convenient and vibrant areas, with easy access to work, education, transport, and everyday essentials.",
+
+          "media_type": "icon",
+          "media": "heart",
+          "media_url": null,
+          "open_in_new_tab": false,
+
+          "is_active": true
+        },
+        {
+          "name": "comfortable-affordable",
+          "eyebrow": "Quality Living at a Reasonable Cost",
+          "title": "Comfortable & Affordable",
+          "description": "We believe a good place to stay should be comfortable and accessible, offering essential facilities at an affordable price.",
+
+          "media_type": "icon",
+          "media": "cloud",
+          "media_url": null,
+          "open_in_new_tab": false,
+
+          "is_active": true
+        },
+        {
+          "name": "call-home",
+          "eyebrow": "A Place You Can Call Home",
+          "title": "Safe, Caring & Homely",
+          "description": "A welcoming environment where residents can feel secure, cared for, and at home while living away from their families.",
+
+          "media_type": "icon",
+          "media": "home",
+          "media_url": null,
+          "open_in_new_tab": false,
+
+          "is_active": true
+        }
+      ]
+    }
+  ]
+}

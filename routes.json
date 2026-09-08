@@ -1,21 +1,16 @@
 [
     {
-        "uri": "external-programs",
+        "uri": "branches",
         "method": "GET",
-        "action": "PageController",
-        "middleware": ["web", "auth"],
-        "params": {
-            "view": "pages.external-programs"
-        }
-    },
-    {
-        "uri": "gourikutty-amma",
-        "method": "GET",
-        "action": "PageController",
+        "action": "CustomRoutesController",
         "middleware": ["web"],
         "params": {
-            "view": "pages.gourikutty-amma",
-            "name": "gourikutty-amma"
+            "view": "pages.branches",
+            "name": "branches",
+            "data":["branches"],
+            "page_heading":"Branches",
+            "page_title":"Branches"
         }
+        
     }
 ]

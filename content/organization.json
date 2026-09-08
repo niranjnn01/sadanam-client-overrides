@@ -1,0 +1,39 @@
+{
+    "organization": {
+        "name": "SNV Sadanam Working Womens Hostel",
+        "organization_type": "school",
+        "timezone": "Asia/Kolkata",
+        "language": "en",
+        "date_format": "d-m-Y",
+        "currency": "INR",
+        "theme": "default"
+    },
+
+    "address": {
+        "address_line_1": "Vanross Jn",
+        "address_line_2": "Palayam",
+        "city": "Thiruvananthapuram",
+        "state": "Kerala",
+        "postal_code": "695034",
+        "country": "IN",
+        "address_type": "registered",
+        "is_primary": true
+    },
+
+    "phone_numbers": [
+        {
+            "number": "+914772123456",
+            "type": "landline",
+            "label": "Main Office",
+            "extension": null,
+            "is_primary": true
+        },
+        {
+            "number": "+919876512345",
+            "type": "mobile",
+            "label": "Admissions",
+            "extension": null,
+            "is_primary": false
+        }
+    ]
+}
