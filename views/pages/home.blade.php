@@ -73,7 +73,7 @@
             </p>
         </div>
 
-        <div class="flex gap-5">
+        <div class="flex flex-col lg:flex-row gap-5">
 
             @foreach($branches as $branch)
             <x-cards.media 
@@ -133,8 +133,15 @@
     </x-container>
 
 
-    {{-- Composite : Img featured Combo --}}
-    @include('system::composites.img-featured-combo')
+    {{-- Composite Component : Img featured Combo --}}
+    <x-system::composites.img-featured-combo 
+        :highlights="$amenities"
+        imageOverlayTitle="Life, Elevated"
+        imageOverlayDescription="All your essentials for living, studying, and relaxing. All under one safe roof."
+        
+        :featuredImgSrc="tenant_asset('images/second-floor.webp')"/>
+    
+    
 
     {{-- Quotation - compact --}}
     <x-system::composites.quotations.compact
@@ -144,7 +151,7 @@
     
 
     {{-- Componet Text Image Gallery --}}
-    <x-system::composites.text-image-gallery 
+    <x-system::composites.gallery-previews.text-featured-mason
         eyebrow="100 Years of Heritage & Comfort" 
         title="A Glance Inside Our Living History"
         :featuredImage="tenant_asset('images/stair-well.webp')"  
@@ -154,7 +161,7 @@
             Step into a space where a century of heritage meets modern comfort. Every corner tells a story, offering an inspiring backdrop for your stay.
         </p>
         <p>Explore the thoughtful details designed to make you feel right at home. you will find fully equipped social lounges, cozy quiet zones, and pristine modern amenities crafted to support both relaxation and productivity. Browse our gallery to get a glimpse of the unique spaces awaiting you.</p>
-    </x-system::composites.text-image-gallery>
+    </x-system::composites.gallery-previews.text-featured-mason>
     
     
 

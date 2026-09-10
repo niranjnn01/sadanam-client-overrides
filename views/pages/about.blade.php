@@ -30,7 +30,7 @@
             <p class="text-center text-lg mb-5">The organization operates several wings designed to meet the diverse needs of its residents</p>
 
 
-            <div class="flex justify gap-3">
+            <div class="flex flex-col lg:flex-row justify gap-3">
 
                 @php
 
@@ -38,17 +38,17 @@
                     [
                         'title' => "Student Hostel",
                         'description' => "Safe and affordable housing for students enrolled in various educational institutions across the city.",
-                        'icon' => "heroicon-o-academic-cap",
+                        'icon' => "heroicon-o-building-office-2",
                     ],
                     [
                         'title' => "Working Women’s Hostels",
                         'description' => "Dedicated accommodation for professionals, ensuring a supportive environment for those entering the workforce.",
-                        'icon' => "heroicon-o-academic-cap",
+                        'icon' => "heroicon-o-home",
                     ],
                     [
                         'title' => "Guest Rooms",
                         'description' => "The hostels provide safe and affordable guest rooms for women who are on a short visit to the city. ",
-                        'icon' => "heroicon-o-academic-cap",
+                        'icon' => "heroicon-o-users",
                     ]
                 ];
                     
@@ -74,7 +74,7 @@
 
     
         
-        <div class="flex gap-5 my-10 py-5">
+        <div class="flex flex-col lg:flex-row gap-5 my-10 py-5">
             <div class="flex-1">
 
                 <x-image class="shadow-xl mb-3" src="{{tenant_asset('images/branches/varkala.webp') }}" alt="Hostel at Saradagiri, Varkala."/>
