@@ -11,7 +11,7 @@
         <div class="text-start">
             <!-- Tagline / Pre-title -->
             <p class="font-bold tracking-widest text-white/90 md:text-xl">
-                Est. 1926 
+                Est. 1924 
             </p>
 
             <!-- Main Heading -->
